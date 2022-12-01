@@ -36,16 +36,23 @@ for (let file of result) {
       directoryPath,
       year,
       problemNumber,
-      `input-${cleanedPart}.txt`
+      `input.txt`
     );
 
     console.log(`YEAR: ${year}, No: ${problemNumber}, Part: ${cleanedPart}`);
     console.log(`Input file: ${inputFilePath}`);
-    console.log(`\nOUTPUT:\n`);
+
+    console.log(`\nOUTPUT STARTS:\n`);
+
+    console.time('Execution time');
 
     const output = await dynamicallyLoadedEsmModule.default(inputFilePath);
     console.log(output);
 
-    console.log('\nOUTPUT ENDS \n');
+    console.log();
+
+    console.timeEnd('Execution time');
+
+    console.log(`OUTPUT ENDS:\n`);
   }
 }
