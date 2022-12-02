@@ -15,3 +15,4 @@ To run specific solution only update the start command to use **year** and **pro
 | State | Problem |
 | ----- | ------- |
 | ✅    | 1       |
+| ✅    | 2       |
